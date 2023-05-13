@@ -50,6 +50,12 @@ struct ContentView: View {
                     Image(systemName: "mappin.and.ellipse")
                     Text("Object Rec")
                 }
+            FacialReconView()
+                .tabItem {
+                    Image(systemName: "person.fill.questionmark")
+                    Text("Facial Rec")
+                }
+            
             FacetimeView()
                 .tabItem {
                     Image(systemName: "video.fill")
