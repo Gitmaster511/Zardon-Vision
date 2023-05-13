@@ -160,7 +160,7 @@ struct HomeView: View {
                             
                             
                             ZStack {
-                                NavigationLink(destination: TextView()) {
+                                NavigationLink(destination: FacetimeView()) {
                                     Text("Human Help Center")
                                         .font(.largeTitle)
                                         .padding(20)
@@ -197,7 +197,10 @@ struct HomeView: View {
                                     VStack {
                                         HStack {
                                             Button("Uber") {
-                                                // Add your button action here
+                                                speak("Opening Uber")
+                                                if let url = URL(string: "uber://") {
+                                                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                                                    }
                                             }
                                             .font(.headline)
                                             .padding()
@@ -206,7 +209,11 @@ struct HomeView: View {
                                             .cornerRadius(10)
                                             
                                             Button("Dominoes") {
-                                                // Add your button action here
+                                                speak("Opening Dominoes")
+
+                                                if let url = URL(string: "Domino's Pizza USA://") {
+                                                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                                                    }
                                             }
                                             .font(.headline)
                                             .padding()
@@ -218,7 +225,10 @@ struct HomeView: View {
                                         }
                                         HStack {
                                             Button("Uber Eats") {
-                                                // Add your button action here
+                                                speak("Uber Eats")
+                                                if let url = URL(string: "Uber Eats: Food Delivery://") {
+                                                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                                                    }
                                             }
                                             .font(.headline)
                                             .padding()
@@ -227,7 +237,9 @@ struct HomeView: View {
                                             .cornerRadius(10)
                                             
                                             Button("Customize \(Image(systemName: "star"))") {
-                                                // Add your button action here
+                                                if let url = URL(string: "Google://") {
+                                                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                                                    }
                                             }
                                             .font(.headline)
                                             .padding()
@@ -240,7 +252,9 @@ struct HomeView: View {
                                         
                                         HStack {
                                             Button("Customize \(Image(systemName: "star"))") {
-                                                // Add your button action here
+                                                if let url = URL(string: "Google://") {
+                                                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                                                    }
                                             }
                                             .font(.headline)
                                             .padding()

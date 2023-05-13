@@ -39,7 +39,7 @@ struct FacetimeView: View {
                             
                         }
                     }
-                    .navigationTitle("Contacts")
+                    .navigationTitle("Human Help Center")
                     
                 }
     }
