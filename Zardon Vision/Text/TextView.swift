@@ -35,9 +35,7 @@ struct TextView: View {
                     }
                     
                 }
-                .onAppear {
-                    speak("Text Recognition")
-                }
+
                 .navigationTitle("Text Scanner")
                 .navigationBarItems(trailing: Button(action: {
                     guard !isRecognizing else { return }
@@ -50,6 +48,9 @@ struct TextView: View {
                         
                         Text("Scan")
                             .foregroundColor(.white)
+                    }
+                    .onAppear {
+                        speak("Text Recognition")
                     }
                     .padding(.horizontal, 16)
                     .frame(height: 36)
