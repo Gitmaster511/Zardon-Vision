@@ -21,15 +21,18 @@ struct Contact: Identifiable {
         var SocialMedihandles: String
 }
 
-let contacts = [ Contact (name: "John Doe", image: "man1", phoneNumber: "908-952-5450", availability: "yes", timezone: "Eastern", Bio: "I like Baseball and long walks on the beach", Hobbies: "Mechanical Keyboards and cooking", SocialMedihandles: "@JohnDoe"),
-Contact(name: "Jane Smith", image: "man3", phoneNumber: "908-952-5450", availability: "no" ,timezone: "Eastern", Bio: "I like Baseball and long walks on the beach", Hobbies: "Mechanical Keyboards and cooking", SocialMedihandles: "@JaneSmith"),
-Contact(name: "Bob Johnson", image: "man2", phoneNumber: "908-952-5450", availability: "yes",timezone: "Western", Bio: "I like to play Valorant and make websites!", Hobbies: "Web development and PC Building", SocialMedihandles: "@BobJohnson"),
-Contact(name: "Mark Davis", image: "man5", phoneNumber: "908-952-5450", availability: "yes", timezone: "Pacific", Bio: "I'm a dog lover and enjoy hiking in my free time.", Hobbies: "Photography and reading", SocialMedihandles: "@EmilyDavis"),
-Contact(name: "Mike Chen", image: "man4", phoneNumber: "908-952-5450", availability: "no", timezone: "Eastern", Bio: "I'm a foodie and love exploring new restaurants in the city.", Hobbies: "Playing guitar and traveling", SocialMedihandles: "@MikeChen"),
-Contact(name: "Samantha Lee", image: "women2", phoneNumber: "908-952-5450", availability: "yes", timezone: "Central", Bio: "I'm a coffee addict and enjoy trying different roasts.", Hobbies: "Yoga and painting", SocialMedihandles: "@SamanthaLee")
+let contacts = [ Contact (name: "John Doe", image: "man1", phoneNumber: "6092056965", availability: "yes", timezone: "Eastern", Bio: "I like Baseball and long walks on the beach", Hobbies: "Mechanical Keyboards and cooking", SocialMedihandles: "@JohnDoe"),
+Contact(name: "Jane Smith", image: "man3", phoneNumber: "6092056965", availability: "no" ,timezone: "Eastern", Bio: "I like Baseball and long walks on the beach", Hobbies: "Mechanical Keyboards and cooking", SocialMedihandles: "@JaneSmith"),
+Contact(name: "Bob Johnson", image: "man2", phoneNumber: "6092056965", availability: "yes",timezone: "Western", Bio: "I like to play Valorant and make websites!", Hobbies: "Web development and PC Building", SocialMedihandles: "@BobJohnson"),
+Contact(name: "Mark Davis", image: "man5", phoneNumber: "6092056965", availability: "yes", timezone: "Pacific", Bio: "I'm a dog lover and enjoy hiking in my free time.", Hobbies: "Photography and reading", SocialMedihandles: "@EmilyDavis"),
+Contact(name: "Mike Chen", image: "man4", phoneNumber: "6092056965", availability: "no", timezone: "Eastern", Bio: "I'm a foodie and love exploring new restaurants in the city.", Hobbies: "Playing guitar and traveling", SocialMedihandles: "@MikeChen"),
+Contact(name: "Samantha Lee", image: "women2", phoneNumber: "6092056965", availability: "yes", timezone: "Central", Bio: "I'm a coffee addict and enjoy trying different roasts.", Hobbies: "Yoga and painting", SocialMedihandles: "@SamanthaLee")
 ]
 
 struct FacetimeView: View {
+    let synthesizer = AVSpeechSynthesizer()
+    let speechUtterance = AVSpeechUtterance(string: "Human Help Center")
+    
     
     var body: some View {
                 NavigationView {
@@ -42,6 +45,9 @@ struct FacetimeView: View {
                     .navigationTitle("Human Help Center")
                     
                 }
+                .onAppear {
+                                synthesizer.speak(speechUtterance)
+                            }
     }
 }
 

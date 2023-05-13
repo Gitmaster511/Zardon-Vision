@@ -23,6 +23,7 @@
 		968ED6382A1000CD00B98AF0 /* TextPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968ED6372A1000CD00B98AF0 /* TextPreviewView.swift */; };
 		9693857A2A10214400820B05 /* FacialReconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969385792A10214400820B05 /* FacialReconView.swift */; };
 		9693857E2A10230600820B05 /* zardon.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9693857D2A10230600820B05 /* zardon.mlmodel */; };
+		969385802A102BD400820B05 /* DepthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693857F2A102BD400820B05 /* DepthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		968ED6372A1000CD00B98AF0 /* TextPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPreviewView.swift; sourceTree = "<group>"; };
 		969385792A10214400820B05 /* FacialReconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialReconView.swift; sourceTree = "<group>"; };
 		9693857D2A10230600820B05 /* zardon.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = zardon.mlmodel; sourceTree = SOURCE_ROOT; };
+		9693857F2A102BD400820B05 /* DepthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		968ED6112A0FFF1000B98AF0 /* Zardon Vision */ = {
 			isa = PBXGroup;
 			children = (
+				969385812A102BEC00820B05 /* Depth */,
 				968ED6242A0FFF6E00B98AF0 /* Facetime */,
 				968ED6232A0FFF5E00B98AF0 /* Facial Recognition */,
 				968ED6222A0FFF5900B98AF0 /* Home */,
@@ -141,6 +144,14 @@
 				968ED62D2A10005A00B98AF0 /* NewView.swift */,
 			);
 			path = Facetime;
+			sourceTree = "<group>";
+		};
+		969385812A102BEC00820B05 /* Depth */ = {
+			isa = PBXGroup;
+			children = (
+				9693857F2A102BD400820B05 /* DepthView.swift */,
+			);
+			path = Depth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +227,7 @@
 				9693857A2A10214400820B05 /* FacialReconView.swift in Sources */,
 				968ED62C2A10003F00B98AF0 /* FacetimeView.swift in Sources */,
 				968ED6302A10009300B98AF0 /* TextView.swift in Sources */,
+				969385802A102BD400820B05 /* DepthView.swift in Sources */,
 				968ED6262A0FFFB900B98AF0 /* CameraView.swift in Sources */,
 				968ED6282A0FFFFA00B98AF0 /* DescribeView.swift in Sources */,
 				968ED6152A0FFF1000B98AF0 /* ContentView.swift in Sources */,

@@ -22,9 +22,9 @@ struct Contact2: Identifiable {
 }
 
 let contacts2 = [
-    Contact(name: "Alex Kim", image: "man4", phoneNumber: "908-952-5450", availability: "yes", timezone: "Mountain", Bio: "I'm a big fan of hiking and camping.", Hobbies: "Playing basketball and listening to podcasts", SocialMedihandles: "@AlexKim"),
-    Contact(name: "Katie Lee", image: "women2", phoneNumber: "908-952-5450", availability: "yes", timezone: "Eastern", Bio: "I love spending time with my family and friends.", Hobbies: "Cooking and watching movies", SocialMedihandles: "@KatieLee"),
-    Contact(name: "David Wang", image: "man5", phoneNumber: "908-952-5450", availability: "yes", timezone: "Pacific", Bio: "I'm passionate about technology and innovation.", Hobbies: "Playing video games and building robots", SocialMedihandles: "@DavidWang")
+    Contact(name: "Alex Kim", image: "man4", phoneNumber: "", availability: "yes", timezone: "Mountain", Bio: "I'm a big fan of hiking and camping.", Hobbies: "Playing basketball and listening to podcasts", SocialMedihandles: "@AlexKim"),
+    Contact(name: "Katie Lee", image: "women2", phoneNumber: "", availability: "yes", timezone: "Eastern", Bio: "I love spending time with my family and friends.", Hobbies: "Cooking and watching movies", SocialMedihandles: "@KatieLee"),
+    Contact(name: "David Wang", image: "man5", phoneNumber: "", availability: "yes", timezone: "Pacific", Bio: "I'm passionate about technology and innovation.", Hobbies: "Playing video games and building robots", SocialMedihandles: "@DavidWang")
 ]
 
 struct NewView: View {

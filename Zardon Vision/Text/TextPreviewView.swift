@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
-
+import AVFoundation
 struct TextPreviewView: View {
     var text: String
+    @State private var text2 = ""
+    let synthesizer = AVSpeechSynthesizer()
+
     
     var body: some View {
         VStack {
@@ -17,6 +20,11 @@ struct TextPreviewView: View {
                     .font(.body)
                     .padding()
             }
+            .onAppear {
+                            let utterance = AVSpeechUtterance(string: self.text)
+                                utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                                self.synthesizer.speak(utterance)
+                            }
         }
     }
 }

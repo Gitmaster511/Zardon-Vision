@@ -44,28 +44,32 @@ struct ContentView: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-
             DescribeView()
                 .tabItem {
                     Image(systemName: "mappin.and.ellipse")
                     Text("Object Rec")
-                }
-            FacialReconView()
-                .tabItem {
-                    Image(systemName: "person.fill.questionmark")
-                    Text("Facial Rec")
-                }
-            
-            FacetimeView()
-                .tabItem {
-                    Image(systemName: "video.fill")
-                    Text("Facetime")
                 }
             TextView()
                 .tabItem {
                     Image(systemName: "text.magnifyingglass")
                     Text("OCR")
                 }
+            DepthView()
+                .tabItem {
+                    Image(systemName: "figure.walk")
+                    Text("Depth Perception")
+                }
+            FacetimeView()
+                .tabItem {
+                    Image(systemName: "video.fill")
+                    Text("Facetime")
+                }
+            FacialReconView()
+                .tabItem {
+                    Image(systemName: "person.fill.questionmark")
+                    Text("Facial Rec")
+                }
+
 
         }
         .accentColor(.red)

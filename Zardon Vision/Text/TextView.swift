@@ -6,8 +6,14 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct TextView: View {
+    let synthesizer = AVSpeechSynthesizer()
+    func speak(_ message: String) {
+        let utterance = AVSpeechUtterance(string: message)
+        synthesizer.speak(utterance)
+    }
     @ObservedObject var recognizedContent = RecognizedContent()
         @State private var showScanner = false
         @State private var isRecognizing = false
@@ -28,6 +34,9 @@ struct TextView: View {
                             .padding(.bottom, 20)
                     }
                     
+                }
+                .onAppear {
+                    speak("Text Recognition")
                 }
                 .navigationTitle("Text Scanner")
                 .navigationBarItems(trailing: Button(action: {
@@ -72,7 +81,9 @@ struct TextView: View {
                     showScanner = false
                 }
             })
+            
         }
+
 }
 
 struct TextView_Previews: PreviewProvider {

@@ -13,8 +13,7 @@ import Intents
 struct HomeView: View {
     let gradient = Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red])
     
-    let synthesizer = AVSpeechSynthesizer()
-    //let message = "Welcome to VisionHelp, this is the homepage, you can use Siri to navigate the app. For instance, say, Hey Siri, navigate to Object recognition"
+    let message = "Welcome to Zardon Vision, "
     var deviceWidth: CGFloat {
         UIScreen.main.bounds.width
     }
@@ -25,9 +24,10 @@ struct HomeView: View {
     @State private var showDropdown = false
     
     
-    let message = "" //ADD MESSAGE FOR WHEN APP OPENS
     let panicMessage = "CLICK AGAIN TO CANCEL" //ADD MESSAGE FOR WHEN APP OPENS
     let panicMessage2 = "ALERTING FAMILY MEMBERS AND CALLING HOSPITAL" //ADD MESSAGE FOR WHEN APP OPENS
+    let synthesizer = AVSpeechSynthesizer()
+
     func speak(_ message: String) {
         let utterance = AVSpeechUtterance(string: message)
         synthesizer.speak(utterance)
@@ -39,47 +39,37 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack {
-                HStack{
-                    Image("man8")
-                        .resizable()
-                        .frame(width: 50, height: 50)
-                        .clipShape(Circle())
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding([.top, .leading], 20)
-                        .onAppear {
-                            speak(message)
-                        }
-                        .overlay(
-                            Text("Morning!")
-                                .position(x: 120, y: 27) // adjust position here
-                                .foregroundStyle(.gray)
-                        )
-                        .overlay(
-                            Text("Daniel Brown")
-                                .position(x: 140, y: 55) // adjust position here
-                                .foregroundStyle(.black)
-                                .font(.system(size: 20))
-                        )
-                    
-                        .overlay (
-                            Image(systemName: "bell")
-                                .font(.system(size: 30.0))
-                                .position(x: 330, y: 42)
-                                .foregroundStyle(.gray)
-                            
-                        )
-                }
-                LazyVStack {
-                    Text("Zardon Vision")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .multilineTextAlignment(.center)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                }
+                    HStack{
+                        Image("man8")
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                            .clipShape(Circle())
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding([.top, .leading], 20)
+
+                            .overlay(
+                                Text("Morning!")
+                                    .position(x: 120, y: 27) // adjust position here
+                                    .foregroundStyle(.gray)
+                            )
+                            .overlay(
+                                Text("Daniel Brown")
+                                    .position(x: 140, y: 55) // adjust position here
+                                    .foregroundStyle(.black)
+                                    .font(.system(size: 20))
+                            )
+                        
+                            .overlay (
+                                Image(systemName: "bell")
+                                    .font(.system(size: 30.0))
+                                    .position(x: 330, y: 42)
+                                    .foregroundStyle(.gray)
+                                
+                            )
+                    }
+
                     VStack {
                         ScrollView {
-
                             Text("Help Like You've Never Experienced Before")
                                 .font(.title)
                                 .fontWeight(.bold)
@@ -124,6 +114,7 @@ struct HomeView: View {
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
                                         .contentShape(Rectangle())
+
                                 }
                                 
                                 Rectangle()
@@ -147,6 +138,7 @@ struct HomeView: View {
                                         .cornerRadius(10)
                                         .contentShape(Rectangle())
                                 }
+
                                 
                                 Rectangle()
                                     .opacity(0.01)
@@ -156,7 +148,7 @@ struct HomeView: View {
                             HStack {
                                 
                             }
-                            .padding(10)
+                            .padding(7)
                             
                             
                             ZStack {
@@ -175,6 +167,9 @@ struct HomeView: View {
                                     .opacity(0.01)
                                     .frame(maxWidth: .infinity, maxHeight: 60)
                                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 30, trailing: 20))
+                            }
+                            HStack {
+                                
                             }
                             .padding(10)
                             
@@ -268,6 +263,12 @@ struct HomeView: View {
                                     }
                                 }
                             }
+
+                            .navigationBarTitle("Zardon Vision")
+                                .font(.title)
+                                .multilineTextAlignment(.center)
+                                .padding()
+                                .frame(maxWidth: .infinity)
                             
                             //If anybody sees this code, Xcode makes it really hard to keep track of curly braces lead to what so I just spammed and hoped it worked 💀
                             
@@ -280,11 +281,14 @@ struct HomeView: View {
                 Spacer()
             }
             }
+        .onAppear {
+            speak(message)
+        }
 
 
 
     }
-    
+
 }
         
 struct HomeView_Previews: PreviewProvider {
