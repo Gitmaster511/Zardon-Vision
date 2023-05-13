@@ -21,6 +21,8 @@
 		968ED6342A1000B200B98AF0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968ED6332A1000B200B98AF0 /* Model.swift */; };
 		968ED6362A1000C100B98AF0 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968ED6352A1000C100B98AF0 /* ScannerView.swift */; };
 		968ED6382A1000CD00B98AF0 /* TextPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968ED6372A1000CD00B98AF0 /* TextPreviewView.swift */; };
+		9693857A2A10214400820B05 /* FacialReconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969385792A10214400820B05 /* FacialReconView.swift */; };
+		9693857E2A10230600820B05 /* zardon.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9693857D2A10230600820B05 /* zardon.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		968ED6332A1000B200B98AF0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		968ED6352A1000C100B98AF0 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		968ED6372A1000CD00B98AF0 /* TextPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPreviewView.swift; sourceTree = "<group>"; };
+		969385792A10214400820B05 /* FacialReconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialReconView.swift; sourceTree = "<group>"; };
+		9693857D2A10230600820B05 /* zardon.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = zardon.mlmodel; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				968ED6192A0FFF1100B98AF0 /* Preview Assets.xcassets */,
+				9693857D2A10230600820B05 /* zardon.mlmodel */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 		968ED6232A0FFF5E00B98AF0 /* Facial Recognition */ = {
 			isa = PBXGroup;
 			children = (
+				969385792A10214400820B05 /* FacialReconView.swift */,
 			);
 			path = "Facial Recognition";
 			sourceTree = "<group>";
@@ -207,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9693857A2A10214400820B05 /* FacialReconView.swift in Sources */,
 				968ED62C2A10003F00B98AF0 /* FacetimeView.swift in Sources */,
 				968ED6302A10009300B98AF0 /* TextView.swift in Sources */,
 				968ED6262A0FFFB900B98AF0 /* CameraView.swift in Sources */,
@@ -218,6 +225,7 @@
 				968ED6322A1000A500B98AF0 /* TextRecognition.swift in Sources */,
 				968ED6362A1000C100B98AF0 /* ScannerView.swift in Sources */,
 				968ED6382A1000CD00B98AF0 /* TextPreviewView.swift in Sources */,
+				9693857E2A10230600820B05 /* zardon.mlmodel in Sources */,
 				968ED6132A0FFF1000B98AF0 /* Zardon_VisionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
