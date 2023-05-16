@@ -44,7 +44,7 @@ struct CameraView: UIViewControllerRepresentable {
                     return
                 }
                 
-                let url = URL(string: "http://172.20.10.3:20100/saveimage")!
+                let url = URL(string: "http://192.168.0.111:20100/saveimage")!
                 var request = URLRequest(url: url)
                 request.httpMethod = "POST"
                 
