@@ -72,5 +72,4 @@ You will see 4 folders
 ![IOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white "IOS")
 
 ## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+License: This work is licensed under a [Creative Commons Attribution-NoDerivatives 4.0 International License](https://creativecommons)
