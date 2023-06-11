@@ -22,11 +22,11 @@ struct HomeView: View {
         UIScreen.main.bounds.height
     }
     @State private var showDropdown = false
-    
+    let synthesizer = AVSpeechSynthesizer()
+
     
     let panicMessage = "CLICK AGAIN TO CANCEL" //ADD MESSAGE FOR WHEN APP OPENS
     let panicMessage2 = "ALERTING FAMILY MEMBERS AND CALLING HOSPITAL" //ADD MESSAGE FOR WHEN APP OPENS
-    let synthesizer = AVSpeechSynthesizer()
 
     func speak(_ message: String) {
         let utterance = AVSpeechUtterance(string: message)
